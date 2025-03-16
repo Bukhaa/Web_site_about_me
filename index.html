@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="src/icons/favicon.ico" />
+    <script src="scripts/script.js"></script>
+    <title>seigtm</title>
+</head>
+
+<body onload="onLoad()">
+    <div class="pageWrapper">
+        <nav class="navigation">
+            <a class="navigationItem" id="navItemMain" onclick="changePage(this)">
+                Главная
+            </a>
+            <a class="navigationItem" id="navItemAbout" onclick="changePage(this)">
+                Обо мне
+            </a>
+            <a class="navigationItem" id="navItemContacts" onclick="changePage(this)">
+                Контакты
+            </a>
+            <a class="navigationItem" id="navItemProjects" onclick="changePage(this)">
+                Проекты
+            </a>
+            <a class="navigationItem" id="navItemResume" href="src/resume.pdf">
+                Резюме
+            </a>
+        </nav>
+
+        <main class="page" id="pageMain">
+            <section class="pageHead">
+                <img src="src/face2.jpg" alt="The picture of my face" class="pageHeadFace" />
+                <div>
+                    <h2>Бухаров Александр</h2>
+                    <h4>Junior C/C++ разработчик</h4>
+                </div>
+            </section>
+            <section class="pageDescription">
+                <p>
+                    Привет! Я Junior разработчик из г. Новосибирск, Россия. В данный
+                    момент прохожу стажировку в компании Eltex в лаборатории ethernet,
+		    активно изучаю языки программирования C/C++, сетевые технологии и
+		    компиляторы.
+                </p>
+                <p>
+                    <i>
+                        Предлагаю вам
+                        <a onclick="changePage(navItemAbout)">узнать обо мне побольше</a>
+                        и ознакомиться с моими
+                        <a onclick="changePage(navItemProjects)">проектами</a>
+                    </i>
+                    
+                </p>
+            </section>
+        </main>
+
+        <main class="page" id="pageAboutMe">
+            <h1>Итак, начнём:</h1>
+
+            <section class="pageDescription">
+                <p>
+                    Как уже было сказано, меня зовут Александр, мне 21 год и я
+                    начинающий разработчик.
+                </p>
+                <p>
+                    На данный момент активно изучаю языки программирования
+                    <b>C и C++</b>.
+                </p>
+                <p>
+                    Хорошо понимаю принципы ООП, базисы разработки приложений, сетевые технологии и
+		    toolchain. Владею: Linux, git, gdb, valgrind, wireshark, Make, имею опыт работы в GNS3.
+                </p>
+                <p>
+                    В данный момент получаю <b>высшее образование на очном</b> отделении
+                    <a href="https://www.nstu.ru/">НГТУ НЭТИ</a> по специальности "Информационные системы и технологии".
+                </p>
+                <p>
+                    Прошёл дополнительные образовательные курсы:
+		    Курc “Системное программирование в Linux” от компании Eltex. 
+		    Онлайн курс по языку С от кафедры микропроцессорных технологий (МФТИ). Преподаватель: Владимиров Константин. 
+		    Онлайн курс по языку С++ от кафедры микропроцессорных технологий (МФТИ) – в процессе изучения. Преподаватель: Владимиров Константин. 
+		    Онлайн курс по компиляторам. Преподаватель: Владимиров Константин. 
+                </p>
+                <p>
+                    Полюбил писать максимально читаемый и красивый код после прочтения книги
+                    <a href="https://www.litres.ru/book/robert-s-martin/chistyy-kod-sozdanie-analiz-i-refaktoring-pdf-epub-6444478/">
+                        "Чистый код"
+                    </a>
+                    Роберт Мартин.
+                </p>
+            </section>
+        </main>
+
+        <main class="page" id="pageContacts">
+            <h4 style="text-align: center">Свяжитесь со мной:</h4>
+        </main>
+
+        <main class="page" id="pageProjects">
+            <h1>Основные проекты с GitHub</h1>
+
+            <div class="projectCard">
+                <a href="https://study-git.eltex-co.ru/january-2025/network-map">
+                    Создание карты сети
+                </a>
+                <img src="src/graph.jpg" alt="Создание карты сети" />
+                <p>
+                     Данная программа предназначена для мониторинга сети и создания графического 
+		     представления узлов. Она собирает информацию о сетевых узлах, записывает её в лог-файл и в формате 
+		     JSON, а также генерирует изображение графа в формате PNG. Для сборки использовали Make.
+                </p>
+                <a href="https://study-git.eltex-co.ru/january-2025/network-map ">Репозиторий на GitLab</a>
+                содержит подробно оформленный readme файл с полной информацией о
+                проекте, его зависимостях, использовании конечным пользователем, области применения, структуре проекта и т.п.
+                </p>
+            </div>
+
+            <div class="projectCard">
+                <a href="https://github.com/Bukhaa/My_String">
+                    Аналог std::string на C++
+                </a>
+                <img src="src/string.jpg" alt="Аналог std::string на C++" />
+                <p>
+                    Данная работа - курсовой проект по программированию за 2 курс.
+		    Вот некоторые дополнительные требования:
+		    Проект должен состоять из двух модулей: модуля класса и модуля головной программы.
+		    Проект не должен содержать глобальных переменных и общедоступных членов данных класса.
+		    Обработка ошибок должна быть выполнена с использованием исключений.
+                </p>
+            </div>
+
+            <div class="projectCard">
+                <a href="https://github.com/Bukhaa/CompGraphics_semester2/tree/main/Triangulation">
+                    Алгоритм триангуляции Делоне на C++
+                </a>
+                <img src="src/triang.jpg" alt="Алгоритм триангуляции Делоне на C++" />
+                <p>
+                    Данный проект представляет собой расчётно графическую работу по компьютерной 
+		    графике за 1 курс.
+                </p>
+                <p>
+                    Данная программа реализует алгоритм триангуляции Делоне для набора точек на плоскости и 
+		    визуализирует результат.
+                </p>
+            </div>
+
+            <div class="projectCard">
+                <a href="https://drive.google.com/drive/folders/1rV05QWp1dPRxSA0NBESzVakGKaWa-iKf?usp=drive_link">
+                    Приложение Блокнот на Java
+                </a>
+                <img src="src/bloknot.jpg" alt="Приложение Блокнот на Java" />
+                <p>Здесь реализовано мобильное приложение Блокнот</p>
+                <p>
+                    Функционал и некоторые требования:
+		    1.  2 основных экрана 
+		    2.  Работа с бд SQLite
+		    3.	Язык программирования - Java 
+		    4.	По функционалу: Создавать заметки с возможностью добавления фотографии, редактировать их, удалять, поиск нужной заметки 
+		    5.	Считывание и запись в бд производятся второстепенном потоке
+
+                </p>
+            </div>
+
+            <div class="projectCard">
+                <a href="https://github.com/Bukhaa/HashTableWithOpenAddress"> Хеш-таблица с открытой адресацией на C++ </a>
+                <img src="src/table.png" alt="Хеш-таблица с открытой адресацией на C++" />
+                <p>
+                    Данный проект был выполнен как тренировочное задание по дисциплине
+		    "Теория алгоритмов". Тема: хеш-функциии и хеш-таблицы. Применение хеширования.
+                </p>
+                <p>
+                    Фукционал и требования:
+		    Форма хеш-таблицыс открытой адресацией
+		    Метод разрешения коллизий - линейное зондирование
+		    Исходные данные (ключ) - целое число на интервале [0, +1 000 000 000]
+		    Метод преобразования ключа в натуральное число - метод выбора цифр
+		    Хеш-функция - модульная
+		    Операции интерфейса: конструктор таблицы, поиск элемента по ключу k, вставка элемента по ключу k, удаление элемента по ключу k, 
+		    текущее количество элементов в таблице, текущий размер таблицы проверка на пустоту таблицы, вывод содержимого таблицы на экран, очистка таблицы
+		    Реализовать дополнительную функцию - Поиск является ли массив подмассивом с использованием хэш-таблицы
+		    Примечание: При выводе структуры хеш-таблицы с цепочками коллизий в строках экранадолжны отражаться индексы таблицы и значения ключей в цепочках 
+		    При выводе структуры хеш-таблицы с открытой адресацией в строках экрана должны отражаться индексы таблицы, значения ключей, состояния ячеек хеш -таблицы (free / busy / deleted)
+                </p> 
+                <p>
+            </div>
+
+            <p>Остались вопросы? Напишите мне:</p>
+        </main>
+
+        <section class="pageContacts">
+            <div class="pageContactItem">
+                <img src="src/icons/github.png" />
+                <a href="https://github.com/Bukhaa">GitHub</a>
+            </div>
+            <div class="pageContactItem">
+                <img src="src/icons/linkedin.png" />
+                <a href="https://www.linkedin.com/in/bukha/">LinkedIn</a>
+            </div>
+            <div class="pageContactItem">
+                <img src="src/icons/telegram.png" />
+                <a href="https://t.me/sanyawer">Telegram</a>
+            </div>
+            <div class="pageContactItem">
+                <img src="src/icons/vk.png" />
+                <a href="https://vk.com/bukha">VK</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
