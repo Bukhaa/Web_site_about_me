@@ -127,17 +127,6 @@ body {
   transform: scale(1.05); /* Увеличение на 5% при наведении */
 }
 
-/* Добавляем правило для текста внутри .projectCard */
-.projectCard h3,
-.projectCard p {
-  transition: transform 0.3s ease;
-}
-
-.projectCard:hover h3,
-.projectCard:hover p {
-  transform: scale(1.05); /* Увеличение текста на 5% при наведении */
-}
-
 @media (max-width: 550px) {
   .pageContacts {
     flex-direction: column;
