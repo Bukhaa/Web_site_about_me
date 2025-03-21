@@ -76,6 +76,7 @@ body {
 }
 
 .pageDescription {
+  text-align: justify;
   margin-bottom: 1em;
 }
 
