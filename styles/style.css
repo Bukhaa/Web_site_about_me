@@ -114,12 +114,17 @@ body {
   padding: 0.5em;
   text-align: center;
   margin-bottom: 1em;
+  transition: transform 0.3s ease;
 }
 
 .projectCard img {
   height: 200px;
   width: 400px;
   padding-top: 1em;
+}
+
+.projectCard:hover {
+  transform: scale(1.05); /* Увеличение на 5% при наведении */
 }
 
 @media (max-width: 550px) {
@@ -144,7 +149,4 @@ body {
   }
 }
 
-.projectCard:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-}
+
