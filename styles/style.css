@@ -120,7 +120,7 @@ body {
 
 .projectCard img {
   height: auto;
-  width: auto;
+  max-width: 100%;
   display: block;   /* Устраняет лишние отступы снизу */
   margin: 0 auto;
   padding-top: 1em;
